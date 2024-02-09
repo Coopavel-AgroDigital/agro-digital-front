@@ -95,7 +95,7 @@ export const HomeTemplate = () => {
       <S.Section>
         <h1>Relatórios</h1>
         <Button>
-          <a href="http://localhost:8090/pdf/generate" download>
+          <a href={`${axios.URL}/pdf/generate`} download>
             Baixar PDF
           </a>
         </Button>
