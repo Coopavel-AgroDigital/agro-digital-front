@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { IAddAmbiencia, IAmbiencia } from './types'
 
-export const URL = 'http://172.20.10.6:8090'
+export const URL = 'http://localhost:8090'
 
 export const getUserById = async (id: string) => {
   try {
