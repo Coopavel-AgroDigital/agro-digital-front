@@ -14,5 +14,14 @@ export const Button = styled.button`
     background-color: unset;
     border: 2px solid ${theme.colors.green};
     color: ${theme.colors.green};
+
+    &:active {
+      background-color: ${theme.colors.green};
+      color: ${theme.colors.white};
+    }
+  }
+
+  &:active {
+    background-color: ${theme.colors.olive};
   }
 `
