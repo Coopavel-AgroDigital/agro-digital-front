@@ -29,6 +29,14 @@ export const AmbienciaTemplate = () => {
     e.preventDefault()
 
     const res = await axios.addAmbienceRegistry(ambience)
+
+    if (res) {
+      alert('Cadastro realizado com sucesso!')
+      window.location.href = '/'
+    } else {
+      alert('Não foi possível realizar o cadastro')
+    }
+
     console.log(res)
   }
 
@@ -125,7 +133,7 @@ export const AmbienciaTemplate = () => {
               onChange={(e) =>
                 setAmbience({
                   ...ambience,
-                  sensacaoTermica: Number(e.target.value)
+                  sensacaoTermica: parseInt(e.target.value)
                 })
               }
               placeholder="0ºC"
@@ -139,7 +147,7 @@ export const AmbienciaTemplate = () => {
               onChange={(e) =>
                 setAmbience({
                   ...ambience,
-                  velocidadeDoVento: Number(e.target.value)
+                  velocidadeDoVento: parseInt(e.target.value)
                 })
               }
               placeholder="20m/s"

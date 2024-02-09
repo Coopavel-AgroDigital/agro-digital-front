@@ -75,9 +75,9 @@ export const HomeTemplate = () => {
             data={ambiencia.temperatura}
             datatype="ºC"
           />
-          <Card title="CARBONO" data={ambiencia.carbono} />
-          <Card title="UMIDADE" data={ambiencia.umidade} />
-          <Card title="ILUMINAÇÃO" data={ambiencia.iluminacao} />
+          <Card title="CARBONO" data={ambiencia.carbono} datatype="pmm" />
+          <Card title="UMIDADE" data={ambiencia.umidade} datatype="%" />
+          <Card title="ILUMINAÇÃO" data={ambiencia.iluminacao} datatype="aux" />
           <Card
             title="SENSAÇÃO TERM."
             data={ambiencia.sensacaoTermica}
@@ -90,15 +90,12 @@ export const HomeTemplate = () => {
           />
         </S.CardsContainer>
         <Button onClick={newRegister}>Novo Registro</Button>
-        <Button className="second">Histórico</Button>
       </S.Section>
       <S.Section>
         <h1>Relatórios</h1>
-        <Button>
-          <a href={`${axios.URL}/pdf/generate`} download>
-            Baixar PDF
-          </a>
-        </Button>
+        <a href={`/pdf/Relatorio.pdf`} download>
+          <Button>Baixar PDF</Button>
+        </a>
       </S.Section>
     </Base>
   )
