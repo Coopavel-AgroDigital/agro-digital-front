@@ -9,6 +9,7 @@ export const Button = styled.button`
   border: none;
   border-radius: 5px;
   font-family: ${theme.font.family.inter};
+  font-size: 18px;
 
   &.second {
     background-color: unset;
