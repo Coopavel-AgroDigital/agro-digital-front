@@ -12,14 +12,14 @@ export const AmbienciaTemplate = () => {
   const [ambience, setAmbience] = useState<IAmbiencia>({
     id: '1',
     temperatura: '',
-    umidade: '',
-    carbono: '',
-    iluminacao: '',
-    phDoSolo: '',
-    nutrientes: '',
-    name: '',
-    sensacaoTermica: 0,
-    velocidadeDoVento: 0,
+    umidade: '67',
+    carbono: '500',
+    iluminacao: '800',
+    phDoSolo: '7',
+    nutrientes: 'Ferro',
+    name: 'Ambiência 2024',
+    sensacaoTermica: 43,
+    velocidadeDoVento: 20,
     data: new Date().toISOString()
   })
 
@@ -104,7 +104,7 @@ export const AmbienciaTemplate = () => {
               required
             />
           </Input>
-          <Input label="Ph do Solo">
+          <Input label="Ph da Água">
             <input
               type="number"
               value={ambience.phDoSolo}
