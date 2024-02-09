@@ -21,5 +21,7 @@ export interface IAddAmbiencia {
   nivelIluminacao: string
   nivelPhSolo: string
   nutrientes: string
+  sensacaoTermica: number
+  velocidadeDoVento: number
   data: string
 }

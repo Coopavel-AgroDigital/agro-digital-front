@@ -56,6 +56,8 @@ export const addAmbienceRegistry = async (data: IAmbiencia) => {
     nutrientes: data.nutrientes,
     temperatura: data.temperatura,
     umidade: data.umidade,
+    sensacaoTermica: data.sensacaoTermica,
+    velocidadeDoVento: data.velocidadeDoVento,
     nome: data.name,
     data: data.data
   }

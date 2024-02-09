@@ -18,6 +18,8 @@ export const AmbienciaTemplate = () => {
     phDoSolo: '',
     nutrientes: '',
     name: '',
+    sensacaoTermica: 0,
+    velocidadeDoVento: 0,
     data: new Date().toISOString()
   })
 
@@ -113,6 +115,34 @@ export const AmbienciaTemplate = () => {
                 setAmbience({ ...ambience, nutrientes: e.target.value })
               }
               placeholder="Ferro, Sódio, etc..."
+              required
+            />
+          </Input>
+          <Input label="Sensação Térmica">
+            <input
+              type="number"
+              value={ambience.sensacaoTermica}
+              onChange={(e) =>
+                setAmbience({
+                  ...ambience,
+                  sensacaoTermica: Number(e.target.value)
+                })
+              }
+              placeholder="0ºC"
+              required
+            />
+          </Input>
+          <Input label="Velocidade do Vento">
+            <input
+              type="number"
+              value={ambience.velocidadeDoVento}
+              onChange={(e) =>
+                setAmbience({
+                  ...ambience,
+                  velocidadeDoVento: Number(e.target.value)
+                })
+              }
+              placeholder="20m/s"
               required
             />
           </Input>
