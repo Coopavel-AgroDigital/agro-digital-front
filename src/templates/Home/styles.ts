@@ -22,9 +22,7 @@ export const Header = styled.header`
 
 export const CardsContainer = styled.div`
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 10px;
 `

@@ -23,6 +23,8 @@ export const getAmbienceById = async (id: string) => {
     iluminacao: '',
     phDoSolo: '',
     nutrientes: '',
+    sensacaoTermica: 0,
+    velocidadeDoVento: 0,
     data: Date.prototype.toISOString.toString()
   }
 
@@ -35,11 +37,13 @@ export const getAmbienceById = async (id: string) => {
     ambiencia.carbono = res.data.nivelCO2
     ambiencia.iluminacao = res.data.nivelIluminacao
     ambiencia.phDoSolo = res.data.nivelPhSolo
+    ambiencia.sensacaoTermica = res.data.sensacaoTermica
+    ambiencia.velocidadeDoVento = res.data.velocidadeDoVento
     ambiencia.nutrientes = res.data.nutrientes
 
     return ambiencia
   } catch (e) {
-    console.log(e)
+    return ambiencia
   }
 }
 

@@ -7,6 +7,8 @@ export interface IAmbiencia {
   iluminacao: string
   phDoSolo: string
   nutrientes: string
+  sensacaoTermica: number
+  velocidadeDoVento: number
   data: string
 }
 

@@ -101,7 +101,7 @@ export const AmbienciaTemplate = () => {
               onChange={(e) =>
                 setAmbience({ ...ambience, phDoSolo: e.target.value })
               }
-              placeholder="800 lux"
+              placeholder="7.0"
               required
             />
           </Input>
@@ -112,7 +112,7 @@ export const AmbienciaTemplate = () => {
               onChange={(e) =>
                 setAmbience({ ...ambience, nutrientes: e.target.value })
               }
-              placeholder="800 lux"
+              placeholder="Ferro, Sódio, etc..."
               required
             />
           </Input>

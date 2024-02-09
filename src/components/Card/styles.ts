@@ -26,6 +26,18 @@ export const Container = styled.div`
   small {
     font-size: 20px;
   }
+
+  &.danger {
+    border: 2px solid ${theme.colors.red};
+
+    h4 {
+      color: ${theme.colors.red};
+    }
+
+    div {
+      color: ${theme.colors.red};
+    }
+  }
 `
 
 export const Title = styled.h4`

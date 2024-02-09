@@ -44,7 +44,8 @@ export default {
     gray: '#E8E8E8',
     darkGray: '#8E8E8E',
     green: '#1A7040',
-    olive: '#22291C'
+    olive: '#22291C',
+    red: '#f20000'
   },
   spacings: {
     xxsmall: '1rem',

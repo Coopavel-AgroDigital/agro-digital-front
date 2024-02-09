@@ -24,6 +24,8 @@ export const HomeTemplate = () => {
     iluminacao: '',
     phDoSolo: '',
     nutrientes: '',
+    sensacaoTermica: 0,
+    velocidadeDoVento: 0,
     data: new Date().toISOString()
   })
 
@@ -44,9 +46,13 @@ export const HomeTemplate = () => {
   }, [])
 
   const sincronizeData = async () => {
-    const res = await axios.getUserById(user.id)
+    const res = await axios.getUserById(id)
+    const resAmbiencia = await axios.getAmbienceById(id)
+
     setUser(res)
+    setAmbiencia(resAmbiencia!)
     console.log(res)
+    console.log(resAmbiencia)
   }
 
   const newRegister = () => {
@@ -64,16 +70,24 @@ export const HomeTemplate = () => {
       <S.Section>
         <h1>Último registro</h1>
         <S.CardsContainer>
-          <Card title="TEMPERATURA">{ambiencia.temperatura}</Card>
-          <Card title="CARBONO">
-            {ambiencia.carbono}
-            <small>ppm</small>{' '}
-          </Card>
-          <Card title="UMIDADE">{ambiencia.umidade}%</Card>
-          <Card title="ILUMINAÇÃO">
-            {ambiencia.iluminacao}
-            <small>lux</small>
-          </Card>
+          <Card
+            title="TEMPERATURA"
+            data={ambiencia.temperatura}
+            datatype="ºC"
+          />
+          <Card title="CARBONO" data={ambiencia.carbono} />
+          <Card title="UMIDADE" data={ambiencia.umidade} />
+          <Card title="ILUMINAÇÃO" data={ambiencia.iluminacao} />
+          <Card
+            title="SENSAÇÃO TERM."
+            data={ambiencia.sensacaoTermica}
+            datatype="ºC"
+          />
+          <Card
+            title="VEL. DO VENTO"
+            data={ambiencia.velocidadeDoVento}
+            datatype="m/s"
+          />
         </S.CardsContainer>
         <Button onClick={newRegister}>Novo Registro</Button>
         <Button className="second">Histórico</Button>
